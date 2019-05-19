@@ -1,4 +1,4 @@
-const jwt = require ('jsonwebtoken');  
+
 const betcryp = require('bcryptjs');
 const path = require('path');
 const fs = require('fs-extra');
@@ -61,6 +61,7 @@ ctrl.foto = async (req, res) => {
     let name = req.file.filename
     const imageTempPath = req.file.path;
     const ext = path.extname(req.file.originalname).toLowerCase();
+   // const targetPath = `https://photos.google.com/album/AF1QipP8bmPKWN1uJ5oWJ3I_gWNWKNwxm3py0auRZ0uK/${name}${ext}`;
     const targetPath = path.resolve(__dirname + `../../../../imgmegafr/appmega/src/assets/public/imgperfil/${name}${ext}`);
 
     // Validate Extension
@@ -68,6 +69,7 @@ ctrl.foto = async (req, res) => {
       // you wil need the public/temp path or this will throw an error
       await fs.rename(imageTempPath, targetPath);
       const usuario = await usuario_model.findById(id);
+ //     let pathViejo = `https://photos.google.com/album/AF1QipP8bmPKWN1uJ5oWJ3I_gWNWKNwxm3py0auRZ0uK/${usuario.image}`;
       let pathViejo = path.resolve(__dirname + `../../../../imgmegafr/appmega/src/assets/public/imgperfil/${usuario.image}`);
       if (fs.existsSync(pathViejo)) {
           await fs.unlink(pathViejo)

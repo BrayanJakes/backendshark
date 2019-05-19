@@ -1,10 +1,8 @@
 const { io } = require('../index');
-const usuarioModel =  require('../models/usuario');
 const chatUserModel = require('../models/chatUser');
 const chatsModel = require('../models/chat');
-const msnEnviadoModel = require('../models/msnenviado');
 
-let conectados = [];
+
 
 io.on('connection', (client) => {
 
