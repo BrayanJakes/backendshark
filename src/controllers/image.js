@@ -62,7 +62,7 @@ ctrl.create = async (req, res) => {
       let name = req.file.filename
       const imageTempPath = req.file.path;
       const ext = path.extname(req.file.originalname).toLowerCase();
-      const targetPath = path.resolve(`https://imgshark.herokuapp.com/assets/public/imagenes/${name}${ext}`);
+      const targetPath = path.resolve(`http://imgshark.herokuapp.com/assets/public/imagenes/${name}${ext}`);
 
       // Validate Extension
       if (ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif') {
