@@ -16,6 +16,6 @@ require('./socket/socket');
 
 
 // Starting the server
-app.listen(app.get('port'), () => {
+server.listen(app.get('port'), () => {
   console.log('Server en el puerto', app.get('port'));
 });
