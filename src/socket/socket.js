@@ -8,12 +8,7 @@ let conectados = [];
 
 io.on('connection', (client) => {
 
-    console.log('Usuario conectado');
-
-
-    client.on('disconnect', () => {
-        console.log('desconectado');
-    })
+    
 
     client.on('usuario', async (data) => {
 
