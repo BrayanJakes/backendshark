@@ -20,7 +20,7 @@ module.exports = app => {
   //   extname: '.hbs'
   // }));
   // app.set('view engine', '.hbs');
-  app.use(multer({dest: path.join(__dirname, '../public/upload/temp')}).single('image'));
+  app.use(multer({dest: path.join('https://backendshark.herokuapp.com/public/upload/temp')}).single('image'));
 
   // middlewares
   app.use(morgan('dev'));
