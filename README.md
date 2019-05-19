@@ -2,6 +2,6 @@
 
 Aqui estan los codigos necesarios para activar ImgShark no olvides descargarlos
 
-link de los repositorios de la red social:
+link de los repositorios de la red social se llama
 
-https://github.com/BrayanJakes/imgshark.git
+imgshark
